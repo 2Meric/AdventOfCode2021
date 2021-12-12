@@ -76,7 +76,7 @@ def open_file(input: str)->[[str],[int]]:
     file.close()
     return [boards, rolls]
 
-def update_boards(boards : [str], roll) -> int:
+def update_boards(boards : [str], roll) -> bool:
     for board in boards:
         board.set_active(value = roll)
         bingo_value = board.is_bingo()

@@ -20,10 +20,13 @@ if __name__ == "__main__":
     tdr_fish = open_file('input')
     days_to_pass = input("Days to pass :")
     for i in range(int(days_to_pass)+1):
-        print("Day "+str(i))
-        print(tdr_fish)
+        #print("Day "+str(i))
+        #print(tdr_fish)
         fish_num = 0
         for tdr in tdr_fish:
             fish_num += tdr
-        print("current number of fish: "+str(fish_num))
+        if i % 10000 == 0:
+            print(str(i))
+        #print("current number of fish: "+str(fish_num))
         tdr_fish = pass_day(tdr_fish)
+    print(fish_num)
